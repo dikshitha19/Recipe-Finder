@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginPage" class="main animated center login-container">
+        <h1>Welcome to Recipe Finder</h1>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="recipeFinder" class="main animated" style="display: none;">
+        <div class="header">
+            <div class="logo">Recipe Finder</div>
+            <div class="search-box">
+                <input type="text" id="searchInput" class="input" placeholder="Search for recipes...">
+                <button class="search-box-icon" id="searchButton">Search</button>
+            </div>
+        </div>
+        <button id="toggleFiltersButton">Show Filters</button>
+        <div id="filters" class="filters" style="display: none;">
+            <label for="calories">Calories:</label>
+            <input type="number" id="calories" placeholder="e.g., 200-500">
+            <label for="diet">Diet:</label>
+            <select id="diet">
+                <option value="">Select Diet</option>
+                <option value="balanced">Balanced</option>
+                <option value="high-protein">High-Protein</option>
+                <option value="low-fat">Low-Fat</option>
+                <option value="low-carb">Low-Carb</option>
+            </select>
+            <label for="health">Health:</label>
+            <select id="health">
+                <option value="">Select Health</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="sugar-conscious">Sugar-Conscious</option>
+                <option value="peanut-free">Peanut-Free</option>
+            </select>
+            <label for="cuisineType">Cuisine Type:</label>
+            <select id="cuisineType">
+                <option value="">Select Cuisine</option>
+                <option value="american">American</option>
+                <option value="asian">Asian</option>
+                <option value="italian">Italian</option>
+                <option value="mexican">Mexican</option>
+            </select>
+            <label for="mealType">Meal Type:</label>
+            <select id="mealType">
+                <option value="">Select Meal</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <label for="dishType">Dish Type:</label>
+            <select id="dishType">
+                <option value="">Select Dish</option>
+                <option value="main course">Main Course</option>
+                <option value="side dish">Side Dish</option>
+                <option value="dessert">Dessert</option>
+                <option value="appetizer">Appetizer</option>
+            </select>
+        </div>
+        <div class="recipe-result">
+            <ul id="results" class="recipe-list"></ul>
+        </div>
+        <button id="favoritesPageButton">View Favorite Recipes</button>
+    </div>
+
+    <div id="favoritesPage" class="main animated" style="display: none;">
+        <h3>Favorite Recipes</h3>
+        <button id="backToSearchButton">Back to Search</button>
+        <div class="favorites">
+            <ul id="favoriteRecipes" class="recipe-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
